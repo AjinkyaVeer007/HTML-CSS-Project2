@@ -9,6 +9,7 @@ body {
   background:rgba(2, 23, 46, 0.8) url("./assets/pexels-maxyne-barcel-10402282\ 1.png");
   background-size: cover;
   background-blend-mode: darken;
+  background-repeat: no-repeat;
 }
 
 .container{
@@ -20,6 +21,11 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
+.navbar svg{
+  display: none;
+}
+
 
 .list{
   display: flex;
@@ -37,47 +43,83 @@ body {
   background-color: #ff505f;
   font-size: 20px;
   font-weight: bold;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 30px;
   border: none;
 }
 
 .hero{
-  position: relative;
- 
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-heading{
-  position: absolute;
   font-size: 85px;
   font-family: "Dela Gothic One";
   text-align: center;
-  width: 80%;
   color: #ffc233;
-  display: block;
-  margin-left: 10%;
+  margin: 10px 50px;
 }
+
 
 .button-large{
   color: #ffffff;
   background-color: #ff505f;
   font-size: 25px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 30px;
   font-weight: bold;
-  position: absolute;
-  left: 45%;
-  top: 210%;
-  display: block;
   border: none;
+  margin: 10px 40%;
 }
 
 .bottom>div>img{
-  position: relative;
-  left: 85%;
-  top: 320px;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  width: 100px;
+  
 }
+
+@media screen and (max-width : 950px){
+
+  body{
+    background-repeat:repeat;
+    height: 100vh;
+    background-size: cover;
+  }
+
+  .navbar svg{
+    background-color: #ff7676;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    display: block;
+  }
+
+  .navbar ul{
+    display: none;
+  }
+
+  .navbar button{
+    display: none;
+  }
+
+  .navbar img{
+    width: 100px;
+  }
+
+  .hero-heading{
+    font-size: 45px;
+    margin: 20px 10px
+  }
+
+  .button-large{
+    font-size: 25px;
+    padding: 10px 30px;
+    margin: 0px 10px;
+  }
+
+  .bottom img{
+    width: 80px;
+  }
+}
+
